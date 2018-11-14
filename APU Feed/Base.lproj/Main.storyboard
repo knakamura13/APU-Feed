@@ -28,35 +28,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="218.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MRd-wJ-5mD" customClass="UIControl">
-                                                    <rect key="frame" x="15" y="11" width="40" height="40"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple-logo-transparent" translatesAutoresizingMaskIntoConstraints="NO" id="f1T-fL-UYf">
-                                                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                                                        </imageView>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="f1T-fL-UYf" firstAttribute="leading" secondItem="MRd-wJ-5mD" secondAttribute="leading" id="BOz-6X-nRj"/>
-                                                        <constraint firstAttribute="width" constant="40" id="GSD-iq-88k"/>
-                                                        <constraint firstItem="f1T-fL-UYf" firstAttribute="top" secondItem="MRd-wJ-5mD" secondAttribute="top" id="QxF-Kh-OGc"/>
-                                                        <constraint firstAttribute="trailing" secondItem="f1T-fL-UYf" secondAttribute="trailing" id="Vhb-4o-Qvu"/>
-                                                        <constraint firstAttribute="bottom" secondItem="f1T-fL-UYf" secondAttribute="bottom" id="slP-3Z-pRu"/>
-                                                        <constraint firstAttribute="height" constant="40" id="wYh-2Q-ir6"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="15"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="6gx-aG-sOh">
-                                                    <rect key="frame" x="63" y="8" width="297" height="198.5"/>
+                                                    <rect key="frame" x="56" y="8" width="304" height="198.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAX-8S-HQQ">
                                                             <rect key="frame" x="0.0" y="0.0" width="45" height="19.5"/>
+                                                            <gestureRecognizers/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
+                                                            <connections>
+                                                                <outletCollection property="gestureRecognizers" destination="fxu-JS-gXX" appends="YES" id="u8h-Ug-bxk"/>
+                                                            </connections>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Acf-eW-eME">
                                                             <rect key="frame" x="0.0" y="62" width="287" height="136.5"/>
@@ -69,22 +52,37 @@
                                                                 </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vj8-1N-buo">
                                                                     <rect key="frame" x="0.0" y="36.5" width="287" height="100"/>
+                                                                    <gestureRecognizers/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="100" id="mPb-p1-zyK"/>
                                                                     </constraints>
+                                                                    <connections>
+                                                                        <outletCollection property="gestureRecognizers" destination="hvl-r9-hmz" appends="YES" id="Dpz-tR-w1n"/>
+                                                                    </connections>
                                                                 </imageView>
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
+                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apple-logo-transparent" translatesAutoresizingMaskIntoConstraints="NO" id="f1T-fL-UYf">
+                                                    <rect key="frame" x="8" y="11" width="40" height="40"/>
+                                                    <gestureRecognizers/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="99t-x7-EaQ"/>
+                                                        <constraint firstAttribute="width" constant="40" id="LZn-XE-DW0"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="u9B-Rs-IYk" appends="YES" id="tTQ-z7-5dE"/>
+                                                    </connections>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="6gx-aG-sOh" secondAttribute="trailing" constant="15" id="6HB-0z-8NN"/>
                                                 <constraint firstItem="6gx-aG-sOh" firstAttribute="top" secondItem="Qs2-BI-WG3" secondAttribute="top" constant="8" id="6bM-FY-G5q"/>
-                                                <constraint firstItem="MRd-wJ-5mD" firstAttribute="top" secondItem="Qs2-BI-WG3" secondAttribute="topMargin" id="EwD-Yz-2Fc"/>
+                                                <constraint firstItem="f1T-fL-UYf" firstAttribute="leading" secondItem="Qs2-BI-WG3" secondAttribute="leading" constant="8" id="IQQ-Jt-AiA"/>
                                                 <constraint firstAttribute="bottom" secondItem="6gx-aG-sOh" secondAttribute="bottom" constant="12" id="PUB-qc-skx"/>
-                                                <constraint firstItem="MRd-wJ-5mD" firstAttribute="leading" secondItem="Qs2-BI-WG3" secondAttribute="leadingMargin" id="Pf9-UM-2Fh"/>
-                                                <constraint firstItem="6gx-aG-sOh" firstAttribute="leading" secondItem="MRd-wJ-5mD" secondAttribute="trailing" constant="8" id="hjk-RP-fVU"/>
+                                                <constraint firstItem="f1T-fL-UYf" firstAttribute="top" secondItem="Qs2-BI-WG3" secondAttribute="topMargin" id="dhy-in-oGw"/>
+                                                <constraint firstItem="6gx-aG-sOh" firstAttribute="leading" secondItem="f1T-fL-UYf" secondAttribute="trailing" constant="8" id="q4s-Mk-UnQ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -117,6 +115,21 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="u9B-Rs-IYk" userLabel="userProfileImageViewTap">
+                    <connections>
+                        <action selector="userProfileImageTapped:" destination="9pv-A4-QxB" id="6ap-ft-chU"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="fxu-JS-gXX" userLabel="userNameLabelTap">
+                    <connections>
+                        <action selector="userNameLabelTapped:" destination="9pv-A4-QxB" id="Gtz-lj-pKO"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="hvl-r9-hmz" userLabel="messageImageViewTap">
+                    <connections>
+                        <action selector="messageImageTapped:" destination="9pv-A4-QxB" id="YaB-qB-8mB"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241384"/>
         </scene>
